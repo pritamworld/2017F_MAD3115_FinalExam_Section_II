@@ -11,3 +11,4 @@ a.	Create custom Location class containing following fields
     iii.	Latitude 
     iv.	  Longitude
 4)	Design navigation mechanism according to your knowledge 
+5) Contact and Email Picker
