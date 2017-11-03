@@ -10,7 +10,7 @@ Perform following task
 
 ![Email](../master/Resources/EmailSend.png)
 
-## 3)	Display atleast five location in table view and selecting one location with navigate to display location on map with pointer. *Hint: User dictionary to store Location class objects *
+## 3)	Display atleast five location in table view and selecting one location with navigate to display location on map with pointer. * Hint: User dictionary to store Location class objects *
 
 a.	Create custom Location class containing following fields
     i.	  Location Id
