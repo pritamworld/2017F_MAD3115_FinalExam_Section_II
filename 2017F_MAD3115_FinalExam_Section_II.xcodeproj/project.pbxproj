@@ -16,6 +16,9 @@
 		07C37ED71FABC8AC00FA5788 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C37ED61FABC8AC00FA5788 /* LocationListViewController.swift */; };
 		07C37ED91FABC8CB00FA5788 /* ShowLocationOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C37ED81FABC8CB00FA5788 /* ShowLocationOnMapViewController.swift */; };
 		07C37EDC1FABC96700FA5788 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C37EDB1FABC96700FA5788 /* Location.swift */; };
+		07C37EE51FABEDFE00FA5788 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C37EE41FABEDFE00FA5788 /* email.png */; };
+		07C37EE71FABEE3400FA5788 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C37EE61FABEE3400FA5788 /* location.png */; };
+		07C37EE91FABEE4F00FA5788 /* sms.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C37EE81FABEE4F00FA5788 /* sms.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		07C37ED61FABC8AC00FA5788 /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		07C37ED81FABC8CB00FA5788 /* ShowLocationOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLocationOnMapViewController.swift; sourceTree = "<group>"; };
 		07C37EDB1FABC96700FA5788 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		07C37EE41FABEDFE00FA5788 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		07C37EE61FABEE3400FA5788 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		07C37EE81FABEE4F00FA5788 /* sms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sms.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		07C37EC01FABC7CA00FA5788 /* 2017F_MAD3115_FinalExam_Section_II */ = {
 			isa = PBXGroup;
 			children = (
+				07C37EDD1FABECE300FA5788 /* Images */,
 				07C37EDA1FABC95300FA5788 /* Models */,
 				07C37ED51FABC84C00FA5788 /* Controllers */,
 				07C37EC11FABC7CA00FA5788 /* AppDelegate.swift */,
@@ -90,6 +97,16 @@
 				07C37EDB1FABC96700FA5788 /* Location.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		07C37EDD1FABECE300FA5788 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				07C37EE41FABEDFE00FA5788 /* email.png */,
+				07C37EE61FABEE3400FA5788 /* location.png */,
+				07C37EE81FABEE4F00FA5788 /* sms.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +168,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C37EE71FABEE3400FA5788 /* location.png in Resources */,
+				07C37EE91FABEE4F00FA5788 /* sms.png in Resources */,
 				07C37ECC1FABC7CA00FA5788 /* LaunchScreen.storyboard in Resources */,
 				07C37EC91FABC7CA00FA5788 /* Assets.xcassets in Resources */,
+				07C37EE51FABEDFE00FA5788 /* email.png in Resources */,
 				07C37EC71FABC7CA00FA5788 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

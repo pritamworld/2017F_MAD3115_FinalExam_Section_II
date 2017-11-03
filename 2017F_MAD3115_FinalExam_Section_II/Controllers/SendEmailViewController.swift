@@ -8,29 +8,56 @@
 //  Name        :
 
 import UIKit
+import MessageUI
+import ContactsUI
 
-class SendEmailViewController: UIViewController {
-
+class SendEmailViewController: UIViewController, MFMailComposeViewControllerDelegate, CNContactPickerDelegate, UITextFieldDelegate {
+@IBOutlet weak var textEmail: UITextField!
+    @IBOutlet var subject: UITextField!
+    @IBOutlet var body: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        textEmail.delegate = self
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func sendMail(sender: AnyObject) {
+        if MFMailComposeViewController.canSendMail() {
+            
+            let picker = MFMailComposeViewController()
+            picker.mailComposeDelegate = self
+            picker.setToRecipients([textEmail.text!])
+            picker.setSubject(subject.text!)
+            picker.setMessageBody(body.text!, isHTML: true)
+            
+            present(picker, animated: true, completion: nil)
+        }
     }
-    */
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let contactPicker = CNContactPickerViewController()
+        contactPicker.delegate = self
+        self.present(contactPicker, animated: true, completion: nil)
+        
+    }
+    
+    // MFMailComposeViewControllerDelegate
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController){
+        print("Cancelled..")
+    }
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+    
+        if contact.emailAddresses.count != 0 {
+            print("Email: \(String(describing: contact.emailAddresses[0].value))")
+            textEmail.text = String(describing: contact.emailAddresses[0].value)
+        }else{
+            textEmail.text = "No Email Found"
+        }
+    }
 
 }
